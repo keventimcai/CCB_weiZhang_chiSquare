@@ -49,7 +49,7 @@ class chiSquare():
         result = [freq.iloc[i, 0] for i in chiMergeResult]
         return result
 
-    def WOE_encode(self,data,boxList,boxIndex,targetIndex):
+    def IV(self,data,boxList,boxIndex,targetIndex):
         """
         :param data: :param data: dataframe,数据
         :param boxList: list,chiMerge所返回的list
@@ -57,18 +57,19 @@ class chiSquare():
         :param targetIndex: dataframe列名，编码所需要的依据列，阳性为1，阴性为0
         :return: list，每个元素为对应的WOE编码
         """
-        result=[]
+        IV_value=0
         positive=data.loc[:,targetIndex].sum()#样本阳性总数
         negative=len(data)-positive#样本阴性综述
-        for i in range(len(boxList)):
-            subData=data[(data.loc[boxIndex]>=boxList[i])&(data.loc[boxIndex]<boxList[i+1])]
+        for i in range(len(boxList)-1):
+            subData=data[np.logical_and(data.loc[:,boxIndex]>=boxList[i],data.loc[:,boxIndex]<boxList[i+1])]
             subPositive = subData.loc[:, targetIndex].sum()  # 箱子阳性总数
-            subNegative = len(subData) - subPositive  # 箱子阴性综述
+            subNegative = len(subData) - subPositive  # 箱子阴性总数
             positiveRate=subPositive/positive
             negativeRate=subNegative/negative
             subWOE=np.log(positiveRate/negativeRate)
-            result.append(subWOE)
-        return result
+            IV_i=(positiveRate-negativeRate)*subWOE
+            IV_value+=IV_i
+        return IV_value
 
 
 
@@ -78,4 +79,5 @@ if __name__ == "__main__":
     chi=chiSquare()
     rr = chi.chiMerge(df,"身高", "化妆",4)
     print(rr)
-    kk=chi.WOE_encode(df,rr,"身高","化妆")
+    kk=chi.IV(df,rr,"身高","etc")
+    print(kk)
