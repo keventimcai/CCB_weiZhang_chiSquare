@@ -8,10 +8,10 @@ class roc:
         :param realArray: list，对应真实值
         :return: null
         """
-        trueSum=sum(realArray)
-        falseSum=len(realArray)-trueSum
+        trueSum=sum(realArray)#全部真实阳性
+        falseSum=len(realArray)-trueSum#真实阴性总数
         data=zip(probabilityArray,realArray)
-        sortData=sorted(data,key=lambda student: student[0],reverse=True)
+        sortData=sorted(data,key=lambda student: student[0],reverse=True)#按概率进行降序排列
         xAxis=[]
         yAxis=[]
         for i in range(len(sortData)):
@@ -19,16 +19,16 @@ class roc:
             for j in range(i):
                 if sortData[j][1]==0:
                     count+=1
-            falsePositiveRate=count/falseSum
+            falsePositiveRate=count/falseSum#假阳性概率
             xAxis.append(falsePositiveRate)
             truePositive=i-count
-            truePositiveRate=truePositive/trueSum
+            truePositiveRate=truePositive/trueSum#真阳性概率
             yAxis.append(truePositiveRate)
         xAxis.append(1)
         yAxis.append(1)
         x=np.array(xAxis)
         y=np.array(yAxis)
-        plt.xlabel("false positive rate")
+        plt.xlabel("false positive rate")#绘图
         plt.ylabel("true positive rate")
         plt.title("ROC")
         for a, b in zip(x, y):
@@ -37,12 +37,13 @@ class roc:
         plt.legend()
         plt.show()
 
-kk=roc()
-real=[1,1,0,1,1,1,0,0,1,0,
-      1,0,1,0,0,0,1,0,1,0]
-pp=[0.9,0.8,0.7,0.6,0.55,0.54,0.53,0.52,0.51,0.505,
-    0.4,0.39,0.38,0.37,0.36,0.35,0.34,0.33,0.30,0.1]
-rr=kk.rocFigure(pp,real)
+if __name__ == "__main__":
+    kk = roc()
+    real = [1, 1, 0, 1, 1, 1, 0, 0, 1, 0,
+            1, 0, 1, 0, 0, 0, 1, 0, 1, 0]
+    pp = [0.9, 0.8, 0.7, 0.6, 0.55, 0.54, 0.53, 0.52, 0.51, 0.505,
+          0.4, 0.39, 0.38, 0.37, 0.36, 0.35, 0.34, 0.33, 0.30, 0.1]
+    rr = kk.rocFigure(pp, real)
 
 
 
