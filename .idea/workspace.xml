@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ee466c3-2f4b-47d3-95bd-c669abd4782e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/roc.py" beforeDir="false" afterPath="$PROJECT_DIR$/roc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/k-means.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,59 +15,44 @@
     <session id="-253526855">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.5" value="3" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.open.time.5" value="5" />
+          <entry key="project.open.time.6" value="2" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="5" />
+          <entry key="py" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="5" />
+          <entry key="Python" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="2270" />
+          <entry key="py" value="3317" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="2270" />
+          <entry key="Python" value="3317" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chi_square.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="75" selection-start-line="75" selection-end-line="75" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-                <marker date="1563168312583" expanded="true" signature="58:3200" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/roc.py">
+        <entry file="file://$PROJECT_DIR$/../抖音作业/chi_square.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="49" selection-start-line="49" selection-end-line="49" />
+            <state>
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
-                <marker date="1563257436449" expanded="true" signature="67:72" ph="..." />
               </folding>
             </state>
           </provider>
@@ -97,12 +83,14 @@
       <list>
         <option value="$PROJECT_DIR$/chi_square.py" />
         <option value="$PROJECT_DIR$/roc.py" />
+        <option value="$PROJECT_DIR$/报告素材/k-means.py" />
+        <option value="$PROJECT_DIR$/k-means.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="840" />
-    <option name="y" value="129" />
+    <option name="y" value="49" />
     <option name="width" value="936" />
     <option name="height" value="1041" />
   </component>
@@ -119,6 +107,11 @@
               <item name="建行张伟老师——数据离散化" type="b2602c69:ProjectViewProjectNode" />
               <item name="建行张伟老师——数据离散化" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="建行张伟老师——数据离散化" type="b2602c69:ProjectViewProjectNode" />
+              <item name="建行张伟老师——数据离散化" type="462c0819:PsiDirectoryNode" />
+              <item name="报告素材" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -126,6 +119,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../抖音作业/chi_square.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -210,7 +204,7 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1233" height="735" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12447786" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22222222" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -263,6 +257,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/roc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <marker date="1563257436449" expanded="true" signature="67:72" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/chi_square.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="381">
@@ -274,13 +279,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/roc.py">
+    <entry file="file://$PROJECT_DIR$/报告素材/k-means.py" />
+    <entry file="file://$PROJECT_DIR$/k-means.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="438">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
+          <caret line="41" column="21" lean-forward="true" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+          <folding>
+            <marker date="1563411984701" expanded="true" signature="33:38" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../抖音作业/chi_square.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <marker date="1563257436449" expanded="true" signature="67:72" ph="..." />
           </folding>
         </state>
       </provider>
